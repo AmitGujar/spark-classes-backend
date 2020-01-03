@@ -1,0 +1,139 @@
+<%- include('partials/header'); -%>
+
+<!--Navbar -->
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark" id="navbar">
+    <a class="navbar-brand" href="#">Spark Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about"><b>About</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><b>Courses</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../feedback/index.html"><b>Feedback</b></a>
+            </li>
+            <!-- dropdown menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><b style="color: white;">More</b></a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/signin">Sign in</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- navbar ended -->
+<div class="container">
+    <section class="mb-4">
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Sign Up Window</h2>
+        <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5">Sign up to unlock more features</p>
+        <!-- grid row -->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-7 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <label for="firstname" class="">First Name </label>
+                                <input type="text" id="firstname" name="firstname" class="form-control" required>
+
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <label for="lastname" class="">Last Name </label>
+                                <input type="text" id="lastname" name="lastname" class="form-control" required>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <label for="phone" class="">Phone No </label>
+                                <input type="text" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                    </div><br>
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <label for="email" class="">Email</label>
+                                <input type="email" id="email" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <label for="radio-btns">Gender </label>
+                                <div class="radio-btns">
+                                    <!-- Material inline 1 -->
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="Male" name="Gender">
+                                        <label class="form-check-label" for="Male">Male </label>
+                                    </div>
+
+                                    <!-- Material inline 2 -->
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="Female" name="Gender">
+                                        <label class="form-check-label" for="Female">Female </label>
+                                    </div>
+
+                                    <!-- Material inline 3 -->
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="Other" name="Gender">
+                                        <label class="form-check-label" for="Other">Other </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <label for="epassword" class="">Enter Password</label>
+                                <input type="password" id="epassword" class="form-control" required>
+
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <div class="col-md-4">
+                            <div class="md-form mb-0">
+                                <label for="cpassword" class="">Confirm Password</label>
+                                <input type="password" id="cpassword" class="form-control" required>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                    </div><br>
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary">Submit</a>
+                    </div>
+                </form><br>
+                <a href="/signin">Click to Log in</a>
+            </div>
+            <!--Grid column-->
+            <div class="col-md-5 text-center">
+                <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/sign_in_v6c6.svg"
+                    alt="load error" height="100%" width="100%">
+            </div>
+        </div>
+    </section>
+</div><br><br><br>
+
+<%- include('partials/footer'); -%>
