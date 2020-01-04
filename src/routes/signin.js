@@ -11,7 +11,7 @@ router.post('/', (request, response, next) => {
             if (user) {
                 response.status(200).render('account');
             } else {
-                response.status(409).render('signin', { title: "Signin to your account", userNotFound: true });
+                response.status(409).render('signin', { title: "Sign in to your account", userNotFound: true });
             }
         }).catch(error => {
             console.log(error);
@@ -19,16 +19,16 @@ router.post('/', (request, response, next) => {
 });
 
 router.get('/admin', (request, response, next) => {
-    response.status(200).render('admin_signin');
+    response.status(200).render('admin_signin', { userNotFound : false });
 });
 
 router.post('/admin', (request, response, next) => {
     Admin.findOne({ $and: [{ email: request.body.adminEmail }, { password: request.body.adminPassword }] }).exec().
         then(admin => {
             if (admin) {
-                response.status(200).send('<h1> Please design admin dashboard </h1>');
+                response.status(200).redirect('/admin/dashboard');
             } else {
-                response.status(409).send('Auth failed');
+                response.status(409).render('admin_signin', { userNotFound : true });
             }
         }).catch(error => {
             console.log(error);

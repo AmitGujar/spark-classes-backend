@@ -14,7 +14,10 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         maxlength: 10
     },
-
+    image_path: {
+        type: String
+    }
+    ,
     qualification: {
         type: String
     },
@@ -43,7 +46,7 @@ const UserSchema = new mongoose.Schema({
     course_type: {
         type: String
     },
-    Remark: {
+    remark: {
         type: String
     },
     registration_date: {

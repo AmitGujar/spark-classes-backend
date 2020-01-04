@@ -9,6 +9,7 @@ const MongoStore = require('connect-mongo')(session);
 //Routes
 const HomepageRouter = require('./src/routes/homepage');
 const SignInRouter = require('./src/routes/signin');
+const AdminDashboardRouter = require('./src/routes/adminDashboard');
 
 //Conguration
 app.use((request, response, next) => {
@@ -60,6 +61,7 @@ app.set("view engine", "ejs");
 //Main routes
 app.use('/', HomepageRouter);
 app.use('/signin', SignInRouter);
+app.use('/admin/dashboard', AdminDashboardRouter)
 
 //Not found
 app.use((resquest, response, next) => {

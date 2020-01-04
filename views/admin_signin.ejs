@@ -72,11 +72,17 @@
                     </div><br>
                     <!--Grid row-->
                     <div class="text-center text-md-left">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
                     </div>
                     <br>
-
+                    <% if (userNotFound) { %>
+                    <div class="alert alert-danger">
+                        Username or password is wrong
+                    </div>
+                    <% } %>
                     <br>
+                    <a href="/signin">Back to student sign in</a><br>
+
                     <a href="../forgot/index.html">Forgot Password ?</a>
                     <p><a href="../create/index.html">Create Account</a></p>
                 </form>
