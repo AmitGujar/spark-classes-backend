@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        <%= title %>
+        Admin Sign in here
     </title>
 </head>
 
@@ -42,7 +42,7 @@
 <div class="container">
     <section class="mb-4">
         <!--Section heading-->
-        <h2 class="h1-responsive font-weight-bold text-center my-4">Log In Window</h2>
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Admin Sign in</h2>
 
         <div class="row">
             <div class="col-md-5 text-center">
@@ -51,14 +51,14 @@
             </div>
             <!--Grid column-->
             <div class="col-md-7 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form" method="POST" action="/signin">
+                <form id="contact-form" name="contact-form" method="POST" action="/signin/admin">
                     <!--Grid row-->
                     <div class="row">
                         <!--Grid column-->
                         <div class="col-md-7">
                             <div class="md-form mb-0">
                                 <label for="name" class="">Your Email</label>
-                                <input type="email" id="name" name="userEmail" class="form-control" required>
+                                <input type="email" id="name" name="adminEmail" class="form-control" required>
 
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="col-md-7">
                             <div class="md-form mb-0">
                                 <label for="password" class="">Your Password</label>
-                                <input type="password" id="password" name="userPassword" class="form-control" required>
+                                <input type="password" id="password" name="adminPassword" class="form-control" required>
                             </div>
                         </div>
                     </div><br>
@@ -75,13 +75,8 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     <br>
-                    <% if (userNotFound) { %>
-                    <div class="alert alert-danger">
-                        Username or password is wrong
-                    </div>
-                    <% } %>
+
                     <br>
-                    <a href="/signin/admin">Admin Sign in</a><br>
                     <a href="../forgot/index.html">Forgot Password ?</a>
                     <p><a href="../create/index.html">Create Account</a></p>
                 </form>

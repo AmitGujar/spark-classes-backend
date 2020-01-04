@@ -6,12 +6,10 @@ router.get('/', (request, response, next) => {
 });
 
 router.get('/signin', (request, response, next) => {
-    response.status(200).render('signin');
+    response.status(200).render('signin', { title: "Signin to your account", userNotFound: false });
 });
 
-router.get('/signin/admin', (request, response, next) => {
-    response.status(200).send('Please signin Admin');
-});
+
 
 router.get('/contact', (request, response, next) => {
     response.status(200).render('contact');

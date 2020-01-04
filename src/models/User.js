@@ -1,7 +1,27 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-    name: {
+    full_name: {
+        type: String
+    },
+    address: {
+        type: String
+    },
+    date_of_birth: {
+        type: String
+    },
+    mobile_number: {
+        type: Number,
+        maxlength: 10
+    },
+
+    qualification: {
+        type: String
+    },
+    reference_from: {
+        type: String
+    },
+    batch_timing: {
         type: String
     },
     email: {
@@ -23,10 +43,14 @@ const UserSchema = new mongoose.Schema({
     course_type: {
         type: String
     },
+    Remark: {
+        type: String
+    },
     registration_date: {
         type: Date,
         default: Date.now()
     }
+
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema, 'users');
